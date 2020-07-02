@@ -83,16 +83,4 @@ async def unban(self, ctx, userId):
     await ctx.guild.unban(user)
     await ctx.send(f"Unbanned {user}")
 
-@client.command()
-async def load(ctx, extension):
-    client.load_extension(f'cogs.{extension})
-
-@client.command()
-async def unload(ctx, extension):
-    client.unload_extension(f'cogs.{extension})
-
-for filename in os.listdir('./cogs'):
-    if
-
-
 client.run('NzI3MjYwOTE4NTA0ODgyMjU2.XvpTzQ.mFmynFz6q6_7bMEcUDaY_xOoLb0')
