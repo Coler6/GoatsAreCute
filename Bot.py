@@ -16,7 +16,7 @@ botdata = BotData()
 @client.event
 async def on_ready():
     print('Bot is ready')
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="goats         g!help for help."))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="goat         g!help for help."))
 
 @client.event
 async def on_member_join(member):
@@ -96,10 +96,6 @@ async def _8ball(ctx, *, question):
                 "Outlook not so good.",
                 "Very doubtful."]
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
-
-@client.command()
-async def clear(ctx, amount=5):
-    await ctx.channel.purge(limit=amount)
 
 @client.command()
 async def kick(ctx, member : discord.Member, *, reason=None):
